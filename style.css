@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "Niconne";
+    src: url("./assets/Niconne-Regular.ttf");
+}
+
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #fec53f 1%, #846d38 70%, #1e1e1e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Niconne", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* barre de menu */
+
+.search-bar {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    width: 80%;
+    height: 70px;
+    border-radius: 50px;
+    opacity: 0.4;
+    background: black;
+    z-index: 5;
+}
+
+/* animation de logo + logo */
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+}
+
+.logo img{
+    position: absolute;
+    top: 10px;
+    left: 12%;
+    width: 40px;
+    animation: rotation 2s linear infinite;
+    z-index: 6;
+
+}
+
+/* menu lien */
+
+.linkMenu {
+    position: absolute;
+    top: 35px;
+    right: 12%;
+    z-index: 6;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: -36px;
+    width: 100px;
+    opacity: 0;
+    animation: none;
+}
+
+@keyframes appear {
+    from {
+        transform: rotateY(0deg);
+        left: 0px;
+        opacity: 0
+    }
+    to {
+        transform: rotateY(360deg);
+        left: -36px;
+        opacity: 1
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+/* description */
+
+.description {
+    position: absolute;
+    top: 11%;
+    left: 20%;
+    color: white;
+    animation: toRight 2s linear forwards, toDown 30s linear;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes toRight {
+    from {
+        width: 0;
+      }
+      to {
+        width: 78%;
+      }
+}
+
+
+/* derrière les cartes */
+
+.behindCard {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 101.6%;
+    background-color: #1e1e1e;
+    opacity: 0.9;
+    color: none;
+    z-index: 4;
+}
+
+/* container de cartes */
+
+.container {
+    display: flex;
+    gap: 100px;
+}
+
+/* ensemble de la carte */
+
+.card {
+    margin-top: 8%;
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+    border-radius: 15px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    z-index: 10;
+}
+
+/* front de la carte */
+
+.card-front {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    transition: all 0.5s ease-out;
+    backface-visibility: hidden;
+    box-shadow: 0px 0px 100px 1px rgba(0, 0, 0, 0.708);
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* back de la carte */
+
+.card-back {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 16px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card-back img {
+    width: 350px;
+    height: 500px;
+}
+
+/* effet de lampe torche au passage de la souris */
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: all 0.5s ease-out;
+    border-radius: 15px;
+    mix-blend-mode: hard-light;
+    background: none;
+}
+
+/* boutons */
+
+.button {
+    position: absolute;
+    top: 53.6%;
+    left: 0%;
+    width: 350px;
+    height: 72px;
+    background: none;
+    border: none;
+    z-index: 20;
+    cursor: pointer;
+}
+
+/* signature */
+
+.signature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    left: 44%;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.signature p {
+    margin-bottom: -18px;
+}
+
+.signature img {
+    width: 200px;
+    transform: rotateZ(-15deg);
+}

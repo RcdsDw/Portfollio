@@ -1,0 +1,33 @@
+.card {
+    margin-top: 0%;
+    width: 420px;
+    height: 600px;
+    perspective: 1000px;
+    border-radius: 10px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12%;
+    left: 47.5%;
+    width: 100px;
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    color: #fec53f;
+    box-shadow: 0px 5px 0px 0px black;
+    transition: 0.3s;
+}
+
+#download:hover {
+    box-shadow: none;
+    top: 12.5%;
+    color: white;
+    transition: 0.3s;
+}

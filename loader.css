@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loader {
+    perspective: 1000px;
+}
+
+img {
+    width: 150px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: perspective(400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+      100% {
+        transform: perspective(400px) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      }
+}
