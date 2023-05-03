@@ -24,14 +24,14 @@
     background-color: #1e1e1e;
     color: #fec53f;
     box-shadow: 0px 5px 0px 0px black;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 #download:hover {
     box-shadow: none;
-    top: 12.5%;
+    top: 10.5%;
     color: white;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 /* back de la carte */
