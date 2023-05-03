@@ -65,6 +65,30 @@
         transform-style: preserve-3d;
     }
 
+    /* barre de menu */
+
+    .search-bar {
+        position: absolute;
+        top: 10px;
+        left: 10%;
+        width: 80%;
+        height: 70px;
+        border-radius: 50px;
+        opacity: 0.4;
+        background: black;
+        z-index: 5;
+    }
+
+    /* menu lien */
+
+    .linkMenu {
+        position: absolute;
+        top: 35px;
+        right: 13%;
+        z-index: 6;
+    }
+
+
     /* bouton de telechargement */
 
     #download {

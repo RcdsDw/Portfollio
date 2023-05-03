@@ -8,6 +8,7 @@ const list = document.querySelector(".list")
 const github = document.getElementById("github")
 const linkedin = document.getElementById("linkedin")
 const cv = document.getElementById("cv")
+const color = document.getElementById("color")
 
 let touchStartX = 0
 let touchEndX = 0 

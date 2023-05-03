@@ -3,6 +3,17 @@ const body = document.querySelector("body")
 const backgroundCard =  document.querySelector(".behindCard")
 const button = document.querySelector(".button")
 
+const changeColor = document.querySelector(".fa-droplet")
+const colorGitHub = document.querySelector(".fa-github")
+const colorLinkedIn = document.querySelector(".fa-linkedin-in")
+const colorCv = document.querySelector(".fa-file")
+
+const card1 = document.getElementById("card1")
+const card2 = document.getElementById("card2")
+const card3 = document.getElementById("card3")
+
+const color = document.getElementById("color")
+
 cards.forEach(card => {
     card.addEventListener("mousemove", e => {
         const glow = card.children[0].children[1]
@@ -86,6 +97,7 @@ menu.addEventListener("click", () => {
     github.style.cursor = "pointer"
     linkedin.style.cursor = "pointer"
     cv.style.cursor = "pointer"
+    color.style.cursor = "pointer"
     } else {
     menu.classList.remove("fa-xmark")
     menu.classList.add("fa-bars")
@@ -98,17 +110,9 @@ menu.addEventListener("click", () => {
     github.style.cursor = "default"
     linkedin.style.cursor = "default"
     cv.style.cursor = "default"
+    color.style.cursor = "default"
     }
 })
-
-const changeColor = document.querySelector(".fa-droplet")
-const colorGitHub = document.querySelector(".fa-github")
-const colorLinkedIn = document.querySelector(".fa-linkedin-in")
-const colorCv = document.querySelector(".fa-file")
-
-const card1 = document.getElementById("card1")
-const card2 = document.getElementById("card2")
-const card3 = document.getElementById("card3")
 
 color.addEventListener("click", () => {
     if (color.classList.contains("purple")) {

@@ -80,6 +80,8 @@ a {
     animation: none;
     transition: all 1s;  
     cursor: default;
+    background: none;
+    border: none;
 }
 
 .list {

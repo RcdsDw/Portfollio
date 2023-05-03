@@ -86,6 +86,7 @@ menu.addEventListener("click", () => {
     github.style.cursor = "pointer"
     linkedin.style.cursor = "pointer"
     cv.style.cursor = "pointer"
+    color.style.cursor = "pointer"
     } else {
     menu.classList.remove("fa-xmark")
     menu.classList.add("fa-bars")
@@ -98,6 +99,7 @@ menu.addEventListener("click", () => {
     github.style.cursor = "default"
     linkedin.style.cursor = "default"
     cv.style.cursor = "default"
+    color.style.cursor = "default"
     }
 })
 
@@ -110,6 +112,8 @@ const card1 = document.getElementById("card1")
 const card2 = document.getElementById("card2")
 const card3 = document.getElementById("card3")
 const download = document.getElementById("download")
+
+const color = document.getElementById("color")
 
 color.addEventListener("click", () => {
     if (color.classList.contains("purple")) {
