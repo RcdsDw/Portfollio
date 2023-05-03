@@ -91,7 +91,8 @@ a {
     width: 100px;
     opacity: 0;
     animation: none;
-    transition: all 1s;  
+    transition: all 1s;
+    transition-property: transform, color, width, height;    
 }
 
 @keyframes appear {
@@ -279,7 +280,6 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: "Niconne", sans-serif;
     }
     
     /* barre de menu */
@@ -300,16 +300,16 @@ a {
         display: flex;
         text-align: justify;
         position: absolute;
-        top: 15%;
+        top: 6%;
         left: 5%;
         width: 80%;
-        font-size: small;
+        font-size: x-large;
         color: white;
         animation: none;
         display: inline-block;
-        white-space: nowrap;
+        overflow: none;
+        white-space: normal;
     }
-    
     
     /* derrière les cartes */
     
@@ -336,10 +336,7 @@ a {
         margin-top: 8%;
         width: 420px;
         height: 600px;
-        perspective: 1000px;
-        border-radius: 15px;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
+        transition: opacity 0.6s ease;
     }
 
     #card1 {
@@ -347,7 +344,6 @@ a {
         top: 30%;
         left: 28%;
         z-index: 2;
-        transition: all 1s;
     }
 
     #card2 {
@@ -358,7 +354,6 @@ a {
         right: 10%;
         opacity: 0.6;
         z-index: -10;
-        transition: all 1s;
     }
 
     #card3 {
@@ -369,7 +364,6 @@ a {
         left: 10%;
         opacity: 0.6;
         z-index: -10;
-        transition: all 1s;
     }
     
     /* back de la carte */
@@ -393,6 +387,18 @@ a {
     .signature {
         position: absolute;
         bottom: 2%;
-        left: 38%;
+        right: 31%;
+    }
+
+    .signature p {
+        font-size: xx-large;
+        margin-bottom: -18px;
+    }
+    
+    .signature img {
+        width: 400px;
+        transform: rotateZ(-15deg);
     }
 }
+
+

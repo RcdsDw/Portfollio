@@ -1,3 +1,15 @@
+const cards = document.querySelectorAll('.card')
+const backgroundCard =  document.querySelector(".behindCard")
+const button = document.querySelector(".button")
+
+const menu = document.getElementById("barsMenu")
+const list = document.querySelector(".list")
+const github = document.getElementById("github")
+const linkedin = document.getElementById("linkedin")
+const cv = document.getElementById("cv")
+
+const color = document.getElementById("color")
+
 let touchStartX = 0
 let touchEndX = 0 
 
@@ -5,6 +17,7 @@ let touchEndX = 0
 let var1 = "card1"
 let var2 = "card2"
 let var3 = "card3"
+
 
 let zone = document.querySelectorAll(".card")
 
@@ -55,33 +68,33 @@ function handleZone() {
     }
 }
 
-const menu = document.getElementById("barsMenu")
-const list = document.querySelector(".list")
-const github = document.getElementById("github")
-const linkedin = document.getElementById("linkedin")
-const cv = document.getElementById("cv")
-
 menu.addEventListener("click", () => {
     if (!list.classList.contains("visible")) {
+    menu.classList.remove("fa-bars")
+    menu.classList.add("fa-xmark")
+
     list.classList.add("visible")
     list.style.animation = "appear 1s ease"
     list.style.opacity = "1"
+    list.style.transitionProperty = `all`
+
     github.style.cursor = "pointer"
     linkedin.style.cursor = "pointer"
     cv.style.cursor = "pointer"
     } else {
+    menu.classList.remove("fa-xmark")
+    menu.classList.add("fa-bars")
+
     list.classList.remove("visible")
     list.style.animation = "disappear 1s ease"
     list.style.opacity = "0"
+    list.style.transitionProperty = `all`
+
     github.style.cursor = "default"
     linkedin.style.cursor = "default"
     cv.style.cursor = "default"
     }
 })
-
-const cards = document.querySelectorAll('.card')
-const backgroundCard =  document.querySelector(".behindCard")
-const button = document.querySelector(".button")
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
@@ -96,6 +109,7 @@ cards.forEach(card => {
             card.classList.add('active')
             card.style.transform = `rotateY(360deg) scale(1.7)`
             card.style.zIndex = `11`
+            card.style.transition = `transform 1s`
             backgroundCard.style.display = "block"
             button.style.display = "block"
         }

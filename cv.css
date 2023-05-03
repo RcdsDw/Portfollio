@@ -37,13 +37,32 @@
 @media  (max-device-width: 425px) 
 {
     .card {
-        margin: 30% 0% 200% 0%;
+        margin: -100% 0% 0% 0%;
         width: 560px;
         height: 800px;
         perspective: 1000px;
         border-radius: 10px;
         transition: transform 0.8s;
         transform-style: preserve-3d;
+    }
+
+    /* bouton de telechargement */
+
+    #download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        left: 41%;
+        width: 200px;
+        height: 45px;
+        border: none;
+        border-radius: 20px;
+        background-color: #1e1e1e;
+        color: #fec53f;
+        box-shadow: 0px 5px 0px 0px black;
+        transition: 0.3s;
     }
 
         
@@ -53,13 +72,22 @@
         width: 560px;
         height: 800px;
     }
-
-
+    
     /* signature */
     
     .signature {
         position: absolute;
         bottom: 5%;
-        left: 38%;
+        right: 31%;
+    }
+
+    .signature p {
+        font-size: xx-large;
+        margin-bottom: -18px;
+    }
+    
+    .signature img {
+        width: 400px;
+        transform: rotateZ(-15deg);
     }
 }
