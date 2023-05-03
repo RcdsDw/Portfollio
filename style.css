@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Niconne";
-    src: url("./assets/Niconne-Regular.ttf");
+    font-family: 'Lilita One';
+    src: url('./assets/LilitaOne-Regular.ttf');
 }
 
 ::before,
@@ -11,12 +11,14 @@
 }
 
 body {
-    background: radial-gradient(ellipse at bottom, #fec53f 1%, #846d38 70%, #1e1e1e 100%);
-    min-height: 100vh;
+    background: radial-gradient(circle, #fec53f, #846d38, #1e1e1e);
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Niconne", sans-serif;
+    font-family: "Lilita One", sans-serif;
+    overflow: hidden;
 }
 
 a {
@@ -67,10 +69,17 @@ a {
     z-index: 6;
 }
 
+#barsMenu {
+    cursor: pointer;
+}
+
 .link {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    animation: none;
+    transition: all 1s;  
+    cursor: default;
 }
 
 .list {
@@ -82,36 +91,37 @@ a {
     width: 100px;
     opacity: 0;
     animation: none;
+    transition: all 1s;  
 }
 
 @keyframes appear {
     from {
         transform: rotateY(0deg);
         left: 0px;
-        opacity: 0
     }
     to {
         transform: rotateY(360deg);
         left: -36px;
-        opacity: 1
     }
 }
 
 @keyframes disappear {
     from {
-        opacity: 1
+        display: flex
     }
     to {
-        opacity: 0
+        display: none
     }
 }
 
 /* description */
 
 .description {
-    position: absolute;
-    top: 11%;
-    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 10% 0% 0% 5%;
     color: white;
     animation: toRight 2s linear forwards, toDown 30s linear;
     display: inline-block;
@@ -124,7 +134,7 @@ a {
         width: 0;
       }
       to {
-        width: 78%;
+        width: 100%;
       }
 }
 
@@ -154,11 +164,11 @@ a {
 /* ensemble de la carte */
 
 .card {
-    margin-top: 8%;
+    margin-top: 3%;
     width: 350px;
     height: 500px;
     perspective: 1000px;
-    border-radius: 15px;
+    border-radius: 0px;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
@@ -173,7 +183,7 @@ a {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 12px;
     transition: all 0.5s ease-out;
     backface-visibility: hidden;
     box-shadow: 0px 0px 100px 1px rgba(0, 0, 0, 0.708);
@@ -191,7 +201,7 @@ a {
     position: absolute;
     top: 0%;
     left: 0%;
-    border-radius: 16px;
+    border-radius: 15px;
     transform: rotateY(180deg);
     backface-visibility: hidden;
 }
@@ -219,11 +229,12 @@ a {
 /* boutons */
 
 .button {
+    display: none;
     position: absolute;
-    top: 53.6%;
+    top: 56%;
     left: 0%;
     width: 350px;
-    height: 72px;
+    height: 62px;
     background: none;
     border: none;
     z-index: 20;
@@ -236,12 +247,9 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 25px;
-    left: 44%;
+    margin-bottom: -5%;
     color: black;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: 'Lilita One'
 }
 
 .signature p {
@@ -251,4 +259,140 @@ a {
 .signature img {
     width: 200px;
     transform: rotateZ(-15deg);
+}
+
+/* Responsive Smartphone */
+
+@media  (max-device-width: 425px) 
+{
+    ::before,
+    ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #fec53f to #1e1e1e; 
+        height: 2200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Niconne", sans-serif;
+    }
+    
+    /* barre de menu */
+    
+    .search-bar {
+        display: flex;
+        width: 80%;
+        height: 70px;
+        border-radius: 50px;
+        opacity: 0.4;
+        background: black;
+        z-index: 5;
+    }
+    
+    /* description */
+    
+    .description {
+        display: flex;
+        text-align: justify;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        width: 80%;
+        font-size: small;
+        color: white;
+        animation: none;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    
+    
+    /* derrière les cartes */
+    
+    .behindCard {
+        display: none;
+        width: 100%;
+        height: 105%;
+        background-color: #1e1e1e;
+        opacity: 0.9;
+        color: none;
+        z-index: 4;
+    }
+
+    /* container de cartes */
+
+    .container {
+        display: flex;
+        gap: 0px;
+    }
+    
+    /* ensemble de la carte */
+    
+    .card {
+        margin-top: 8%;
+        width: 420px;
+        height: 600px;
+        perspective: 1000px;
+        border-radius: 15px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    #card1 {
+        position: absolute;
+        top: 30%;
+        left: 28%;
+        z-index: 2;
+        transition: all 1s;
+    }
+
+    #card2 {
+        position: absolute;
+        width: 280px;
+        height: 400px;
+        top: 36%;
+        right: 10%;
+        opacity: 0.6;
+        z-index: -10;
+        transition: all 1s;
+    }
+
+    #card3 {
+        position: absolute;
+        width: 280px;
+        height: 400px;
+        top: 36%;
+        left: 10%;
+        opacity: 0.6;
+        z-index: -10;
+        transition: all 1s;
+    }
+    
+    /* back de la carte */
+
+    .card-back {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        border-radius: 16px;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+
+    .card-back img {
+        width: 420px;
+        height: 600px;
+    }
+
+    /* signature */
+    
+    .signature {
+        position: absolute;
+        bottom: 2%;
+        left: 38%;
+    }
 }

@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.card')
 const body = document.querySelector("body")
 const backgroundCard =  document.querySelector(".behindCard")
+const button = document.querySelector(".button")
 
 cards.forEach(card => {
     card.addEventListener("mousemove", e => {
@@ -43,7 +44,6 @@ cards.forEach(card => {
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
-        const glow = card.children[0].children[1]
         
         if (card.classList.contains("active")) {
             card.classList.remove('active')
@@ -51,39 +51,40 @@ cards.forEach(card => {
             card.style.position = `initial`
             card.style.zIndex = `0`
             backgroundCard.style.display = "none"
+            button.style.display = "none"
         } else {
             card.classList.add('active')
             card.style.transform = `rotateY(360deg) scale(1.7)`
             card.style.position = `absolute`
-            card.style.top = `10%`
+            card.style.top = `17%`
             card.style.left = `40%`
             card.style.zIndex = `11`
             backgroundCard.style.display = "block"
+            button.style.display = "block"
         }
     })
 })
 
 const menu = document.getElementById("barsMenu")
 const list = document.querySelector(".list")
+const github = document.getElementById("github")
+const linkedin = document.getElementById("linkedin")
+const cv = document.getElementById("cv")
 
-menu.addEventListener("mousemove", () => {
+menu.addEventListener("click", () => {
+    if (!list.classList.contains("visible")) {
+    list.classList.add("visible")
     list.style.animation = "appear 1s ease"
     list.style.opacity = "1"
-    list.classList.add("visible")
-})
-
-list.addEventListener("mousemove", () => {
-    if (list.classList.contains("visible")) {
-        list.style.opacity = "1"
-        list.children.style.cursor = "cursor"
+    github.style.cursor = "pointer"
+    linkedin.style.cursor = "pointer"
+    cv.style.cursor = "pointer"
     } else {
-        list.style.opacity = "0"
-        list.children.style.cursor = "none"
-    }
-})
-
-list.addEventListener("mouseleave", () => {
+    list.classList.remove("visible")
     list.style.animation = "disappear 1s ease"
     list.style.opacity = "0"
-    list.classList.remove("visible")
+    github.style.cursor = "default"
+    linkedin.style.cursor = "default"
+    cv.style.cursor = "default"
+    }
 })

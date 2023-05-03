@@ -24,3 +24,12 @@ img {
         transform: perspective(400px) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
       }
 }
+
+@media  (max-device-width: 425px) 
+{
+  img {
+    position: relative;
+    top: -220px;
+    left: -5%;
+  }
+}

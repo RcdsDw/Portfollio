@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="shortcut icon" type="image/ico" href="./assets/favicon.ico">
-    <script src="https://kit.fontawesome.com/9b62b45484.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
     <title>Portfollio</title>
 </head>
 <body>
@@ -20,11 +22,11 @@
         <div class="linkMenu" class>
             <i id="barsMenu" class="fa-solid fa-bars fa-2xl" style="color: #fec53f;"></i>
             <div class="list">
-                    <a href="https://github.com/RcdsDw" title="GitHub" class="link" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #fec53f;"></i></a>
+                    <a href="https://github.com/RcdsDw" title="GitHub" id="github" class="link" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #fec53f;"></i></a>
 
-                    <a href="https://www.linkedin.com/in/rafaelcandidodasilva/" title="LinkedIn" class="link" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl" style="color: #fec53f;"></i></a>
+                    <a href="https://www.linkedin.com/in/rafaelcandidodasilva/" id="linkedin" title="LinkedIn" class="link" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl" style="color: #fec53f;"></i></a>
                     
-                    <a href="loader2.html" title="CV" class="link"><i class="fa-solid fa-file fa-2xl" style="color: #fec53f;"></i></a>
+                    <a href="loader2.html" title="CV" id="cv" class="link"><i class="fa-solid fa-file fa-2xl" style="color: #fec53f;"></i></a>
             </div>
         </div>
     </div>
@@ -37,9 +39,9 @@
     </div>
     <div class="behindCard"></div>
     <div class="container">
-        <div class="card">
+        <div class="card" id="card1" >
             <div class="card-front">
-                <img src="./assets/card1.png" alt="card"/>
+                <img src="./assets/card1y.png" alt="card"/>
                 <div class="card-glow"></div>
                 <a class="button" id="btn1" href='https://rcdsdw.github.io/Booki/' target="_blank"></a>
             </div>
@@ -48,9 +50,9 @@
                 <img src="./assets/cardback.png" alt="card-back"/>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="card2">
             <div class="card-front">
-                <img src="./assets/card2.png" alt="card"/>
+                <img src="./assets/card2Y.png" alt="card"/>
                 <div class="card-glow"></div>
                 <a class="button" id="btn1" href='https://rcdsdw.github.io/Password-Generator-App/' target="_blank"></a>
             </div>
@@ -59,9 +61,9 @@
                 <img src="./assets/cardback.png" alt="card-back"/>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="card3">
             <div class="card-front">
-                <img src="./assets/card3.png" alt="card"/>
+                <img src="./assets/card3y.png" alt="card"/>
                 <div class="card-glow"></div>
                 <a class="button" id="btn1" href='https://rcdsdw.github.io/Calculatrice/' target="_blank"></a>
             </div>
@@ -72,14 +74,14 @@
         </div>
     </div>
 
-    <a class="signature" href="https://github.com/RcdsDw" target="_blank">
-        <p>Developped by</p>
-        <img src="./assets/signature.png" >
-    </a>
-    
-
-
+    <footer>
+        <a class="signature" href="https://github.com/RcdsDw" target="_blank">
+            <p>Developped by</p>
+            <img src="./assets/signature.png" >
+        </a>
+    </footer>
 </div>   
-<script src="script.js"></script>
+<script src="test.js"></script>
+<script src="https://kit.fontawesome.com/9b62b45484.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,12 +8,14 @@
     transform-style: preserve-3d;
 }
 
+/* bouton de telechargement */
+
 #download {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 12%;
+    top: 10%;
     left: 47.5%;
     width: 100px;
     height: 25px;
@@ -30,4 +32,34 @@
     top: 12.5%;
     color: white;
     transition: 0.3s;
+}
+
+@media  (max-device-width: 425px) 
+{
+    .card {
+        margin: 30% 0% 200% 0%;
+        width: 560px;
+        height: 800px;
+        perspective: 1000px;
+        border-radius: 10px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+        
+    /* back de la carte */
+
+    .card-back img {
+        width: 560px;
+        height: 800px;
+    }
+
+
+    /* signature */
+    
+    .signature {
+        position: absolute;
+        bottom: 5%;
+        left: 38%;
+    }
 }
