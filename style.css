@@ -153,7 +153,6 @@ a {
     height: 101.6%;
     background-color: #1e1e1e;
     opacity: 0.9;
-    color: none;
     z-index: 4;
 }
 
@@ -276,8 +275,8 @@ a {
     }
 
     body {
-        background: #fec53f to #1e1e1e; 
-        height: 2200px;
+        background: radial-gradient(#fec53f to #1e1e1e); 
+        height: 2250px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -318,7 +317,7 @@ a {
         color: white;
         animation: none;
         display: inline-block;
-        overflow: none;
+        overflow: unset;
         white-space: normal;
     }
     
@@ -330,7 +329,6 @@ a {
         height: 110%;
         background-color: #1e1e1e;
         opacity: 0.9;
-        color: none;
         z-index: 4;
     }
 
