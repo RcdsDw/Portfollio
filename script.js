@@ -49,7 +49,7 @@ cards.forEach(card => {
             card.classList.remove('active')
             card.style.transform = `rotateY(0deg)`
             card.style.position = `initial`
-            card.style.zIndex = `0`
+            card.style.zIndex = `2`
             card.style.position = `initial`
             backgroundCard.style.display = "none"
             button.style.display = "none"

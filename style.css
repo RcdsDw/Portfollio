@@ -315,7 +315,7 @@ a {
     
     .behindCard {
         display: none;
-        width: 100%;
+        width: 105%;
         height: 105%;
         background-color: #1e1e1e;
         opacity: 0.9;
