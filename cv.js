@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.card')
 const body = document.querySelector("body")
 const backgroundCard =  document.querySelector(".behindCard")
+const signature = document.querySelector(".signature")
 
 cards.forEach(card => {
     card.addEventListener("mousemove", e => {
@@ -43,20 +44,23 @@ cards.forEach(card => {
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
-        const glow = card.children[0].children[1]
         
         if (card.classList.contains("active")) {
             card.classList.remove('active')
             card.style.transform = `rotateY(0deg)`
             card.style.position = `initial`
+            signature.style.position = `initial`
             card.style.zIndex = `0`
             backgroundCard.style.display = "none"
         } else {
             card.classList.add('active')
             card.style.transform = `rotateY(360deg) scale(1.5)`
             card.style.position = `absolute`
-            card.style.top = `20%`
+            card.style.bottom = `0%`
             card.style.left = `40%`
+            signature.style.position = `absolute`
+            signature.style.left = `45%`
+            signature.style.bottom = `15%`
             card.style.zIndex = `11`
             backgroundCard.style.display = "block"
         }
@@ -65,35 +69,34 @@ cards.forEach(card => {
 
 const menu = document.getElementById("barsMenu")
 const list = document.querySelector(".list")
+const github = document.getElementById("github")
+const linkedin = document.getElementById("linkedin")
+const cv = document.getElementById("cv")
 
-menu.addEventListener("mousemove", () => {
+menu.addEventListener("click", () => {
+    if (!list.classList.contains("visible")) {
+    menu.classList.remove("fa-bars")
+    menu.classList.add("fa-xmark")
+
+    list.classList.add("visible")
     list.style.animation = "appear 1s ease"
     list.style.opacity = "1"
-    list.classList.add("visible")
-})
+    list.style.transitionProperty = `all`
 
-list.addEventListener("mousemove", () => {
-    if (list.classList.contains("visible")) {
-        list.style.opacity = "1"
-        list.children.style.cursor = "cursor"
+    github.style.cursor = "pointer"
+    linkedin.style.cursor = "pointer"
+    cv.style.cursor = "pointer"
     } else {
-        list.style.opacity = "0"
-        list.children.style.cursor = "none"
-    }
-})
+    menu.classList.remove("fa-xmark")
+    menu.classList.add("fa-bars")
 
-list.addEventListener("mouseleave", () => {
+    list.classList.remove("visible")
     list.style.animation = "disappear 1s ease"
     list.style.opacity = "0"
-    list.classList.remove("visible")
-})
+    list.style.transitionProperty = `all`
 
-document.getElementById("download").addEventListener("click", function(){
-    let link = document.createElement('a');
-    link.setAttribute('download', '');
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    link.setAttribute('href', './assets/cv.pdf');
-    link.click();
-    document.body.removeChild(link);
-  });
+    github.style.cursor = "default"
+    linkedin.style.cursor = "default"
+    cv.style.cursor = "default"
+    }
+})

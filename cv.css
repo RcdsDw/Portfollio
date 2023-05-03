@@ -1,5 +1,5 @@
 .card {
-    margin-top: 0%;
+    margin: 45% 0% 10% 0%;
     width: 420px;
     height: 600px;
     perspective: 1000px;
@@ -16,7 +16,7 @@
     align-items: center;
     position: absolute;
     top: 10%;
-    left: 47.5%;
+    left: 48%;
     width: 100px;
     height: 25px;
     border: none;
@@ -32,6 +32,25 @@
     top: 12.5%;
     color: white;
     transition: 0.3s;
+}
+
+/* back de la carte */
+
+.card-back img {
+    width: 420px;
+    height: 600px;
+}
+
+/* signature */
+
+.signature p {
+    font-size: small;
+    margin-bottom: -18px;
+}
+
+.signature img {
+    width: 200px;
+    transform: rotateZ(-15deg);
 }
 
 @media  (max-device-width: 425px) 
