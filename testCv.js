@@ -5,7 +5,7 @@ let largeur = window.screen.width;
 console.log(largeur)
 function changeScript() 
 {
-  if (largeur < 426) {
+  if (largeur < 426 || largeur < 769) {
     console.log("oui")
     if (scriptElement.src.includes("cv.js") || scriptElement.src.includes("testCv.js")) {
       scriptElement.parentNode.removeChild(scriptElement);

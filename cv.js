@@ -42,6 +42,8 @@ cards.forEach(card => {
 })
 
 
+let width = window.screen.width;
+
 cards.forEach(card => {
     card.addEventListener("click", () => {
         
@@ -54,7 +56,11 @@ cards.forEach(card => {
             backgroundCard.style.display = "none"
         } else {
             card.classList.add('active')
-            card.style.transform = `rotateY(360deg) scale(1.5)`
+            if (width < 1441) {
+                card.style.transform = `rotateY(360deg) scale(1.3)`
+            } else {
+                card.style.transform = `rotateY(360deg) scale(1.5)`
+            }
             card.style.position = `absolute`
             card.style.bottom = `0%`
             card.style.left = `40%`

@@ -53,6 +53,155 @@
     transform: rotateZ(-15deg);
 }
 
+/* Responsive Laptop L */
+
+@media  (min-device-width: 769px) and (max-device-width: 1440px) 
+{
+
+    /* bouton de telechargement */
+
+    #download {
+        top: 12%;
+        left: 47%;
+    }
+
+    .card {
+        margin: 40% 0% 10% 0%;
+        width: 350px;
+        height: 500px;
+    }
+    
+    /* back de la carte */
+    
+    .card-back img {
+        width: 350px;
+        height: 500px;
+    }
+
+    /* signature */
+    
+    .signature {
+        position: absolute;
+        bottom: 10%;
+        right: 43%;
+    }
+}
+
+/* Responsive Laptop S */
+
+@media  (min-device-width: 769px) and (max-device-width: 1024px) 
+{
+
+    /* barre de menu */
+
+    .search-bar {
+        width: 80%;
+        height: 70px;
+    }
+
+    /* menu lien */
+
+    .linkMenu {
+        right: 13%;
+    }
+
+     /* signature */
+    
+     .signature {
+        position: absolute;
+        bottom: 10%;
+        right: 41%;
+    }
+}
+
+/* Responsive Tablet */
+
+@media (min-device-width: 426px) and (max-device-width: 768px) 
+{
+    .card {
+        margin: 0% 0% 900px 0%;
+        width: 420px;
+        height: 600px;
+        border-radius: 10px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        z-index: 5;
+    }
+
+    /* barre de menu */
+
+    .search-bar {
+        position: absolute;
+        top: 10px;
+        left: 10%;
+        width: 82%;
+        height: 70px;
+        border-radius: 50px;
+        opacity: 0.4;
+        background: black;
+        z-index: 5;
+    }
+
+    /* menu lien */
+
+    .linkMenu {
+        position: absolute;
+        top: 35px;
+        right: 10%;
+        z-index: 6;
+    }
+
+
+    /* bouton de telechargement */
+
+    #download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        left: 44%;
+        width: 150px;
+        height: 45px;
+        border: none;
+        border-radius: 20px;
+        background-color: #1e1e1e;
+        color: #fec53f;
+        box-shadow: 0px 5px 0px 0px black;
+        transition: 0.3s;
+    }
+
+        
+    /* back de la carte */
+
+    .card-back img {
+        width: 420px;
+        height: 600px;
+    }
+    
+    /* signature */
+    
+    .signature {
+        position: absolute;
+        bottom: 5%;
+        right: 38%;
+    }
+
+    .signature p {
+        font-size: large;
+        margin-bottom: -18px;
+        z-index: -1;
+    }
+    
+    .signature img {
+        width: 250px;
+        transform: rotateZ(-15deg);
+        z-index: -1;
+    }
+}
+
+/* Responsive Smartphone */
+
 @media  (max-device-width: 425px) 
 {
     .card {

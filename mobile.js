@@ -51,6 +51,8 @@ menu.addEventListener("click", () => {
     }
 })
 
+let width = window.screen.width;
+
 cards.forEach(card => {
     card.addEventListener("click", () => {
         
@@ -66,7 +68,7 @@ cards.forEach(card => {
             isCardActive = true
 
             card.classList.add('active')
-            card.style.transform = `rotateY(360deg) scale(1.7)`
+            card.style.transform = `rotateY(360deg) scale(1.5)`
             card.style.zIndex = `11`
             card.style.transition = `transform 1s`
             backgroundCard.style.display = "block"

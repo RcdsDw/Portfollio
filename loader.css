@@ -25,6 +25,19 @@ img {
       }
 }
 
+@media  (max-device-width: 768px) 
+{
+  .loader {
+    perspective: 2000px;
+  }
+
+  img {
+    position: relative;
+    bottom: 520px;
+    left: 0%;
+  }
+}
+
 @media  (max-device-width: 425px) 
 {
   img {

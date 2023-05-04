@@ -263,9 +263,243 @@ a {
     transform: rotateZ(-15deg);
 }
 
+/* Responsive Laptop L */
+
+@media  (min-device-width: 1025px) and (max-device-width: 1440px) 
+{
+    /* description */
+
+    .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        margin: 10% 0% 0% 0%;
+        color: white;
+        animation: toRight 2s linear forwards, toDown 30s linear;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    /* ensemble de la carte */
+
+    .card {
+        margin-top: 0%;
+        width: 280px;
+        height: 400px;
+        perspective: 1000px;
+        border-radius: 0px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    /* arrière de la carte */
+
+    .card-back img {
+        width: 280px;
+        height: 400px;
+    }
+}
+
+@media  (min-device-width: 769px) and (max-device-width: 1024px) 
+{
+    /* barre de menu */
+
+    .search-bar {
+        position: absolute;
+        top: 10px;
+        left: 10%;
+        width: 90%;
+        height: 70px;
+        border-radius: 50px;
+        opacity: 0.4;
+        background: black;
+        z-index: 5;
+    }
+    
+    /* menu lien */
+
+    .linkMenu {
+        position: absolute;
+        top: 35px;
+        right: 2%;
+        z-index: 6;
+    }
+
+    /* description */
+
+    .description {
+        display: flex;
+        text-align: justify;
+        position: absolute;
+        top: 1%;
+        left: 5%;
+        width: 80%;
+        font-size:medium;
+        color: white;
+        animation: none;
+        display: inline-block;
+        overflow: unset;
+        white-space: normal;
+    }
+
+    /* ensemble de la carte */
+
+    .card {
+        margin-top: 35%;
+        width: 280px;
+        height: 400px;
+        perspective: 1000px;
+        border-radius: 0px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    /* arrière de la carte */
+
+    .card-back img {
+        width: 280px;
+        height: 400px;
+    }
+}
+
+/* Responsive Tablet */
+
+@media  (min-device-width: 426px) and (max-device-width: 768px) 
+{
+    body {
+        background: radial-gradient(#fec53f to #1e1e1e); 
+        height: 2000px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* barre de menu */
+    
+    .search-bar {
+        display: flex;
+        width: 84%;
+        height: 70px;
+        border-radius: 50px;
+        opacity: 0.4;
+        background: black;
+        z-index: 5;
+    }
+
+    /* menu lien */
+
+    .linkMenu {
+        position: absolute;
+        top: 35px;
+        right: 8%;
+        z-index: 6;
+    }
+    
+    /* description */
+    
+    .description {
+        display: flex;
+        text-align: justify;
+        position: absolute;
+        top: 1%;
+        left: 5%;
+        width: 77%;
+        font-size:medium;
+        color: white;
+        animation: none;
+        display: inline-block;
+        overflow: unset;
+        white-space: normal;
+    }
+    
+    /* derrière les cartes */
+    
+    .behindCard {
+        display: none;
+        width: 115%;
+        height: 116%;
+        background-color: #1e1e1e;
+        opacity: 0.9;
+        z-index: 4;
+    }
+    
+    /* ensemble de la carte */
+    
+    .card {
+        margin-top: 3%;
+        width: 350px;
+        height: 500px;
+        transition: opacity 0.6s ease;
+    }
+
+    #card1 {
+        position: absolute;
+        top: 35%;
+        left: 35.5%;
+        z-index: 2;
+    }
+
+    #card2 {
+        position: absolute;
+        width: 280px;
+        height: 400px;
+        top: 41%;
+        right: 5%;
+        opacity: 0.6;
+        z-index: -10;
+    }
+
+    #card3 {
+        position: absolute;
+        width: 280px;
+        height: 400px;
+        top: 41%;
+        left: 10%;
+        opacity: 0.6;
+        z-index: -10;
+    }
+    
+    /* back de la carte */
+
+    .card-back {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        border-radius: 16px;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+
+    .card-back img {
+        width: 350px;
+        height: 500px;
+    }
+
+    /* signature */
+    
+    .signature {
+        position: absolute;
+        bottom: 5%;
+        right: 34%;
+    }
+
+    .signature p {
+        font-size: large;
+        margin-bottom: -18px;
+    }
+    
+    .signature img {
+        width: 250px;
+        transform: rotateZ(-15deg);
+    }
+}
+
 /* Responsive Smartphone */
 
-@media  (max-device-width: 425px) 
+@media  (max-device-width: 425px)
 {
     ::before,
     ::after {

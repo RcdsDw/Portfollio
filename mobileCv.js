@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.card')
+const body = document.querySelector("body")
 const backgroundCard =  document.querySelector(".behindCard")
 
 cards.forEach(card => {
