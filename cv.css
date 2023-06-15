@@ -3,7 +3,7 @@
     width: 420px;
     height: 600px;
     perspective: 1000px;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
